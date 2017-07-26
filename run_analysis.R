@@ -2,8 +2,10 @@
 library('plyr')
 library('dplyr')
 library('data.table')
-#Read in test data if it is not already in the enviroment - just to save time
-if (!exists('x_train')) {
+#Read in test data
+# 'if' added just to save time once data has been loaded. None of this data
+# is modifiied in the script so there is no need to reload it
+if (!exists('x_test')) {
     x_test <- read.table ('./UCI HAR Dataset/test/X_test.txt')
     y_test <- read.table ('./UCI HAR Dataset/test/Y_test.txt')
     subject_test <- read.table ('./UCI HAR Dataset/test/subject_test.txt')
@@ -19,13 +21,13 @@ if (!exists('x_train')) {
     y_train <- rename(y_train, activity = V1)
 }
 
-## 1.Merges the training and the test sets to create one data set.
+## 1.Merge the training and the test sets to create one data set.
 # The data is also converted into a data.table here
 dt <- cbind(subject_test, y_test, x_test) %>%
     rbind(cbind(subject_train, y_train, x_train)) %>%
     tbl_df
 
-## 2. Extracts only the measurements on the
+## 2. Extract only the measurements on the
 ##      mean and standard deviation for each measurement.
 
 # Grep() function returns the variables with mean or std followed by an '('
@@ -34,7 +36,7 @@ dt <- cbind(subject_test, y_test, x_test) %>%
 # subject have been added to dt
 dt <- select(dt, c(1,2,  grep('.*(mean|std)\\(.*', features$V2)+2))
 
-## 3. Uses descriptive activity names to name the activities in the data set
+## 3. Use descriptive activity names to name the activities in the data set
 # These names are taken straight form the activity_labels.txt file
 dt$activity <- mapvalues(as.factor(dt$activity),
                        from = as.character(activity_labels$V1),
