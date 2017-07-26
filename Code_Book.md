@@ -9,12 +9,12 @@ See README for full details of data source and code to produce this dataset
 
 #### activity
 Each subject was recorded undertaking 6 activities: <br/>
-* WALKING
-* WALKING UPSTAIRS
-* WALKING DOWNSTAIRS
-* SITTING
-* STANDING
-* LAYING
+1. WALKING
+2. WALKING UPSTAIRS
+3. WALKING DOWNSTAIRS
+4. SITTING
+5. STANDING
+6. LAYING
 
 #### Variables
 
