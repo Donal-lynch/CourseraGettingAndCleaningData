@@ -4,7 +4,7 @@
 ## For creating a tidy data set from Human Activity Recognition Using Smartphones Dataset
 
 ### Data source and details
-#####This data has been sourced from from:
+####This data has been sourced from from:
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto. <br/>
 Smartlab - Non Linear Complex Systems Laboratory<br/> 
 DITEN - Università degli Studi di Genova.<br/> 

@@ -4,10 +4,10 @@ See README for full details of data source and code to produce this dataset
 
 ### Explanation of columns
 
-####subject
+#### subject
 30 subjects were recoded for this test. Each subject was given a number, 1-30
 
-####activity
+#### activity
 Each subject was recorded undertaking 6 activities:
 1 WALKING
 2 WALKING UPSTAIRS
@@ -16,7 +16,7 @@ Each subject was recorded undertaking 6 activities:
 5 STANDING
 6 LAYING
 
-####Variables
+#### Variables
 
 The following list of data has been recorded from the Samsung devices. The -XYZ suffix implies that the measurement is made up of 3 separate measurements, the X, Y and Z directions.
 
